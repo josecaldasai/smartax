@@ -1,0 +1,174 @@
+
+Requisitos Técnicos - SmarTax AI (Versión Web Piloto)
+1. Visión General del Producto
+SmarTax AI es una plataforma impulsada por IA que ayuda a las PyMEs mexicanas a simplificar su gestión fiscal, optimizar obligaciones tributarias y mitigar riesgos fiscales, todo a través de una interfaz web intuitiva y accesible.
+1.1 Objetivos del MVP
+Crear una plataforma web que demuestre las capacidades principales de SmarTax AI
+Proporcionar valor inmediato a las PyMEs a través de funcionalidades básicas de cumplimiento fiscal
+Permitir la validación del modelo de negocio con usuarios reales
+Establecer la base técnica para futuras expansiones
+1.2 Usuarios Objetivo
+PyMEs mexicanas (enfoque inicial en CDMX, Guadalajara y Monterrey)
+Contadores y gestores financieros de pequeñas empresas
+Dueños de negocios sin experiencia fiscal especializada
+2. Requerimientos Funcionales
+2.1 Gestión de Usuarios
+RF-01: Sistema de registro y autenticación de usuarios
+RF-02: Roles de usuario (Admin, Usuario estándar, Contador)
+RF-03: Gestión de perfiles de empresa
+RF-04: Recuperación de contraseña
+RF-05: Autenticación de dos factores
+2.2 Dashboard Principal
+RF-06: Panel de control personalizable con métricas fiscales clave
+RF-07: Visualización de estados financieros simplificados
+RF-08: Indicadores de salud fiscal (semáforo de riesgos)
+RF-09: Calendario fiscal con plazos y recordatorios
+RF-10: Resumen de obligaciones pendientes y completadas
+2.3 Módulo de Cumplimiento Fiscal
+RF-11: Integración con el sistema de facturación electrónica del SAT
+RF-12: Automatización de validación de CFDI (emitidos y recibidos)
+RF-13: Clasificación automática de facturas por tipo de gasto
+RF-14: Detección de discrepancias entre registros y requisitos fiscales
+RF-15: Generación de reportes para declaraciones mensuales
+2.4 Optimización Fiscal con IA
+RF-16: Análisis básico de estructura fiscal de la empresa
+RF-17: Recomendaciones para optimización fiscal legal
+RF-18: Simulador de escenarios fiscales
+RF-19: Alertas sobre deducciones no aprovechadas
+RF-20: Comparación con benchmarks del sector
+2.5 Sistema de Alertas y Notificaciones
+RF-21: Alertas en tiempo real sobre riesgos fiscales detectados
+RF-22: Notificaciones sobre cambios en la legislación fiscal
+RF-23: Recordatorios de fechas límite de declaraciones
+RF-24: Alertas sobre inconsistencias en registros contables
+RF-25: Sistema de priorización de riesgos (alto, medio, bajo)
+2.6 Asistente Virtual Fiscal
+RF-26: Chatbot especializado en consultas fiscales
+RF-27: Capacidad para responder preguntas sobre normativa fiscal mexicana
+RF-28: Asistencia paso a paso para procesos fiscales comunes
+RF-29: Interpretación de documentos fiscales subidos por el usuario
+RF-30: Explicaciones simplificadas de términos fiscales complejos
+2.7 Gestión Documental
+RF-31: Almacenamiento seguro de documentos fiscales
+RF-32: Organización automática de documentos por categorías
+RF-33: Extracción automática de datos de documentos (OCR)
+RF-34: Control de versiones de documentos fiscales
+RF-35: Búsqueda avanzada de documentos
+3. Requerimientos No Funcionales
+3.1 Rendimiento
+RNF-01: Tiempo de respuesta máximo de 2 segundos para operaciones estándar
+RNF-02: Capacidad para manejar al menos 500 usuarios concurrentes
+RNF-03: Procesamiento de hasta 10,000 facturas mensuales por cliente
+RNF-04: Tiempo de generación de reportes fiscales no superior a 30 segundos
+3.2 Seguridad
+RNF-05: Encriptación de datos sensibles en tránsito y en reposo
+RNF-06: Cumplimiento con la Ley Federal de Protección de Datos (LFPDPPP)
+RNF-07: Registro detallado de actividades (audit trail)
+RNF-08: Protección contra ataques comunes (XSS, CSRF, SQL Injection)
+RNF-09: Políticas de contraseñas robustas
+3.3 Disponibilidad y Confiabilidad
+RNF-10: Disponibilidad del sistema de 99.5% (para MVP)
+RNF-11: Backup diario de datos con retención de 30 días
+RNF-12: Plan de recuperación ante desastres
+RNF-13: Monitoreo proactivo del sistema
+3.4 Usabilidad
+RNF-14: Interfaz adaptable (responsive) para dispositivos móviles y desktop
+RNF-15: Tiempos de aprendizaje no superiores a 2 horas para usuarios nuevos
+RNF-16: Soporte para navegadores modernos (Chrome, Firefox, Safari, Edge)
+RNF-17: Diseño accesible según estándares WCAG 2.1 (nivel AA)
+RNF-18: Soporte para idioma español (con terminología fiscal mexicana)
+3.5 Escalabilidad
+RNF-19: Arquitectura que permita escalar horizontalmente
+RNF-20: Diseño modular para facilitar la adición de nuevas funcionalidades
+RNF-21: Capacidad para expandirse a otros mercados (Colombia, Perú, Chile)
+3.6 Mantenibilidad
+RNF-22: Documentación completa del código y APIs
+RNF-23: Pruebas automatizadas con cobertura mínima del 70%
+RNF-24: Seguimiento de estándares de codificación consistentes
+4. Integración con Sistemas Externos
+4.1 Integración con SAT
+INT-01: Conexión con API de validación de CFDI
+INT-02: Validación de estatus fiscal de proveedores
+INT-03: Consulta de obligaciones fiscales de la empresa
+INT-04: Autentificación con E.Firma
+4.2 Integración con Sistemas Contables
+INT-04: Compatibilidad con formatos de exportación estándar (XML, CSV)
+INT-05: Conectores para sistemas contables populares en México (CONTPAQi, Aspel)
+INT-06: Sincronización bidireccional de datos contables
+4.3 Integración con Servicios Bancarios
+INT-07: Conexión segura con APIs bancarias (para MVP: lectura de estados de cuenta)
+INT-08: Conciliación automática de movimientos bancarios con facturas
+5. Arquitectura Técnica
+5.1 Frontend
+Framework: React.js con Next.js
+Gestión de estado: Redux
+UI: Tailwind CSS con componentes personalizados
+Gráficos: Recharts
+Testing: Jest, React Testing Library
+5.2 Backend
+Lenguaje: Node.js con TypeScript
+Framework: NestJS
+ORM: Prisma
+API: REST con OpenAPI (Swagger)
+Testing: Jest
+5.3 Base de Datos
+Principal: PostgreSQL
+Cache: Redis
+Análisis: MongoDB (datos no estructurados)
+5.4 IA y ML
+NLP: OpenAI API para el asistente virtual
+Análisis predictivo: TensorFlow.js
+Procesamiento de documentos: Python con OCR (Tesseract)
+5.5 DevOps
+Contenedorización: Docker
+Orquestación: Kubernetes
+CI/CD: GitHub Actions
+Monitorización: Prometheus, Grafana
+Logs: ELK Stack
+5.6 Infraestructura Cloud
+Proveedor principal: Azure Microsoft
+Región: Azure Microsoft
+Servicios clave: 
+EC2/ECS para aplicaciones
+RDS para PostgreSQL
+S3 para almacenamiento
+Cognito para autenticación
+CloudWatch para monitoreo
+6. Consideraciones de Cumplimiento Legal
+6.1 Cumplimiento Fiscal
+Alineación con disposiciones del SAT
+Compatibilidad con requisitos de facturación electrónica mexicana
+Actualización regular según cambios legislativos
+6.2 Protección de Datos
+Cumplimiento con LFPDPPP
+Procesos de manejo de datos personales
+Políticas de retención y eliminación de datos
+6.3 Seguridad de la Información
+Seguimiento de mejores prácticas de seguridad (OWASP)
+Auditorías de seguridad periódicas
+Plan de respuesta a incidentes
+7. Definición de Éxito del MVP
+El MVP se considerará exitoso si:
+Permite a usuarios registrar su información fiscal básica
+Proporciona un dashboard funcional con métricas clave
+Detecta correctamente al menos el 80% de discrepancias fiscales comunes
+El asistente virtual puede responder correctamente al 70% de consultas fiscales básicas
+Los usuarios pueden cargar y clasificar facturas con precisión del 85%
+El tiempo de implementación para un nuevo cliente es inferior a 48 horas
+Se obtiene una satisfacción de usuario de al menos 7/10 en encuestas iniciales
+8. Limitaciones Conocidas del MVP
+Integración limitada con ciertos sistemas contables
+Funcionalidades de optimización fiscal enfocadas solo en casos de uso más comunes
+Soporte inicial solo para empresas de régimen fiscal simplificado y general
+Análisis predictivo básico sin modelado avanzado
+Sin soporte para gestión de nómina en la versión inicial
+Enfoque en cumplimiento federal (no estatal/municipal)
+9. Próximas Iteraciones (Post-MVP)
+Módulo de planificación fiscal avanzada
+Extensión a otros regímenes fiscales
+Integración con más sistemas contables
+Funcionalidades de gestión de nómina
+Análisis predictivo avanzado
+Expansión a otros mercados latinoamericanos
+10. Riesgos Técnicos y Mitigación
+

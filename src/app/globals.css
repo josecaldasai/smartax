@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Calistoga:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importar fuentes de SmarTax AI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Colores principales SmarTax AI */
+  --smartax-blue-deep: #03080E;
+  --smartax-blue-prussia: #12262D; 
+  --smartax-blue-graphite: #314E5B;
+  --smartax-terracotta: #A27B5A;
+  --smartax-copper: #97582D;
+  --smartax-copper-light: #B7753B;
+  --smartax-copper-lighter: #D99F60;
+  --smartax-ivory: #DDD7C9;
+  
+  /* Variables CSS para Tailwind */
+  --color-primary: var(--smartax-blue-prussia);
+  --color-primary-dark: var(--smartax-blue-deep);
+  --color-accent: var(--smartax-copper);
+  --color-accent-light: var(--smartax-terracotta);
+  --color-neutral: var(--smartax-blue-graphite);
+  --color-background: var(--smartax-ivory);
+  
+  --foreground-rgb: 18, 38, 45;
+  --background-start-rgb: 221, 215, 201;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 221, 215, 201;
+    --background-start-rgb: 3, 8, 14;
+    --background-end-rgb: 18, 38, 45;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Estilos tipográficos SmarTax AI */
+.font-smartax-display {
+  font-family: 'Neue Haas Grotesk Display Pro', 'Inter', system-ui, sans-serif;
+}
+
+.font-smartax-text {
+  font-family: 'Neue Haas Grotesk Text Pro', 'Inter', system-ui, sans-serif;
+}
+
+.font-smartax-secondary {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Clases de utilidad para colores SmarTax AI */
+.text-smartax-blue-deep { color: var(--smartax-blue-deep); }
+.text-smartax-blue-prussia { color: var(--smartax-blue-prussia); }
+.text-smartax-blue-graphite { color: var(--smartax-blue-graphite); }
+.text-smartax-terracotta { color: var(--smartax-terracotta); }
+.text-smartax-copper { color: var(--smartax-copper); }
+.text-smartax-ivory { color: var(--smartax-ivory); }
+
+.bg-smartax-blue-deep { background-color: var(--smartax-blue-deep); }
+.bg-smartax-blue-prussia { background-color: var(--smartax-blue-prussia); }
+.bg-smartax-blue-graphite { background-color: var(--smartax-blue-graphite); }
+.bg-smartax-terracotta { background-color: var(--smartax-terracotta); }
+.bg-smartax-copper { background-color: var(--smartax-copper); }
+.bg-smartax-ivory { background-color: var(--smartax-ivory); }
+
+.border-smartax-blue-deep { border-color: var(--smartax-blue-deep); }
+.border-smartax-blue-prussia { border-color: var(--smartax-blue-prussia); }
+.border-smartax-blue-graphite { border-color: var(--smartax-blue-graphite); }
+.border-smartax-terracotta { border-color: var(--smartax-terracotta); }
+.border-smartax-copper { border-color: var(--smartax-copper); }
+.border-smartax-ivory { border-color: var(--smartax-ivory); }
+
+/* Clases de ring focus para SmarTax AI */
+.focus\:ring-smartax-copper:focus { 
+  --tw-ring-color: var(--smartax-copper);
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+}
+
+.focus\:ring-smartax-blue-prussia:focus { 
+  --tw-ring-color: var(--smartax-blue-prussia);
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+}
+
+/* Gradientes SmarTax AI */
+.bg-gradient-smartax-primary {
+  background: linear-gradient(135deg, var(--smartax-blue-deep) 0%, var(--smartax-blue-prussia) 50%, var(--smartax-blue-graphite) 100%);
+}
+
+.bg-gradient-smartax-warm {
+  background: linear-gradient(135deg, var(--smartax-terracotta) 0%, var(--smartax-copper) 50%, var(--smartax-copper-light) 100%);
+}
+
+.bg-gradient-smartax-accent {
+  background: linear-gradient(135deg, var(--smartax-blue-graphite) 0%, var(--smartax-terracotta) 100%);
+}
+
+.bg-gradient-smartax-light {
+  background: linear-gradient(135deg, var(--smartax-ivory) 0%, #ffffff 100%);
+}
+
+/* Animaciones mejoradas */
+@keyframes smartax-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes smartax-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--smartax-copper); }
+  50% { box-shadow: 0 0 20px var(--smartax-copper), 0 0 30px var(--smartax-copper-light); }
+}
+
+.animate-smartax-pulse { animation: smartax-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.animate-smartax-glow { animation: smartax-glow 3s ease-in-out infinite; }
+
+/* Estilos para componentes específicos */
+.smartax-card {
+  background: var(--smartax-ivory);
+  border: 1px solid rgba(49, 78, 91, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(3, 8, 14, 0.1);
+}
+
+.smartax-card-dark {
+  background: var(--smartax-blue-deep);
+  border: 1px solid rgba(49, 78, 91, 0.3);
+  color: var(--smartax-ivory);
+}
+
+.smartax-button-primary {
+  background: linear-gradient(135deg, var(--smartax-blue-prussia) 0%, var(--smartax-blue-graphite) 100%);
+  color: var(--smartax-ivory);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.smartax-button-primary:hover {
+  background: linear-gradient(135deg, var(--smartax-blue-deep) 0%, var(--smartax-blue-prussia) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(18, 38, 45, 0.3);
+}
+
+.smartax-button-accent {
+  background: linear-gradient(135deg, var(--smartax-copper) 0%, var(--smartax-copper-light) 100%);
+  color: var(--smartax-ivory);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.smartax-button-accent:hover {
+  background: linear-gradient(135deg, var(--smartax-copper-light) 0%, var(--smartax-copper-lighter) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(151, 88, 45, 0.3);
+}
+
+.smartax-button-secondary {
+  background: var(--smartax-ivory);
+  color: var(--smartax-blue-deep);
+  border: 1px solid var(--smartax-blue-graphite);
+  transition: all 0.3s ease;
+}
+
+.smartax-button-secondary:hover {
+  background: var(--smartax-blue-graphite);
+  color: var(--smartax-ivory);
+  border-color: var(--smartax-copper);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(49, 78, 91, 0.2);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply smartax-button-primary font-medium py-2 px-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply smartax-button-secondary font-medium py-2 px-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-soft border border-gray-100 p-6;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors duration-200;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+  
+  .badge-success {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-warning-100 text-warning-800;
+  }
+  
+  .badge-danger {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-danger-100 text-danger-800;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animaciones personalizadas */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+} 
